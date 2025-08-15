@@ -1,0 +1,4 @@
+*
+!.gitignore
+!/add-infoleg-api-plugin/
+!/add-infoleg-api-plugin/*

@@ -14,6 +14,9 @@ $table_prefix = 'wp_';
 define( 'WP_CONTENT_DIR', __DIR__ . '/wp-content' );
 define( 'WP_CONTENT_URL', sprintf( 'http://%s/wp-content', $_SERVER['HTTP_HOST'] ) );
 
+define( 'WP_HOME', 'http://' . $_SERVER['HTTP_HOST'] );
+define( 'WP_SITEURL', 'http://' . $_SERVER['HTTP_HOST'] . '/wordpress' );
+
 /** Absolute path to the WordPress directory. */
 if ( ! defined( 'ABSPATH' ) ) {
 	define( 'ABSPATH', __DIR__ . '/wordpress/' );

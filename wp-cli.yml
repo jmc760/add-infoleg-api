@@ -1,0 +1,9 @@
+path: wordpress
+url: localhost:8080/wordpress 
+
+core install:
+  skip-config: true
+  title: infoleg
+  admin_user: infoleg
+  admin_password: infoleg
+  admin_email: juanmanuelcerdeira760@gmail.com

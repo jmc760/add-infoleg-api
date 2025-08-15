@@ -9,15 +9,31 @@ services:
       MYSQL_USER: ${MYSQL_USER}
       MYSQL_PASSWORD: ${MYSQL_PASSWORD}
       MYSQL_DATABASE: ${MYSQL_DATABASE}
+
     volumes:
       - db_data:/var/lib/mysql
 
   wp:
-    image: wordpress:php8.4-apache
+    build:
+      context: ./tools/docker/wordpress
+      dockerfile: Dockerfile
     ports:
       - 8080:80
     volumes:
       - .:/var/www/html
+
+  phpmyadmin:
+    image: phpmyadmin:latest
+    ports:
+      - 8081:80
+    env_file:
+      - .env
+    environment:
+      PMA_HOST: mysql
+      PMA_USER: ${MYSQL_USER}
+      PMA_PASSWORD: ${MYSQL_PASSWORD}
+    depends_on:
+      - mysql
 
 volumes:
   db_data:

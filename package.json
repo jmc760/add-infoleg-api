@@ -1,0 +1,14 @@
+{
+    "name": "add-infoleg-api",
+    "version": "1.0.0",
+    "private": true,
+    "scripts": {
+        "start": "docker compose up --detach --build --remove-orphans",
+        "stop": "docker compose down",
+        "destroy": "docker compose down --volumes",
+        "logs": "docker compose logs --follow",
+        "cli": "docker compose run --user=www-data wp",
+        "wp": "npm run cli -- composer run wp --"
+
+    }
+}
