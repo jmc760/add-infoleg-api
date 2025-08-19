@@ -22,6 +22,9 @@ RUN curl -fsSL https://deb.nodesource.com/setup_20.x \
 	| bash - \
 	&& apt-get install nodejs --yes --no-install-recommends
 
+# Install Xdebug for PHP.
+RUN pecl install xdebug-3.4.4 && docker-php-ext-enable xdebug
+
 # Install helper utility to wait for DB or anything else to be available over TCP.
 RUN curl https://raw.githubusercontent.com/eficode/wait-for/v2.2.4/wait-for --output /usr/local/bin/wait-for \
 	&& chmod +x /usr/local/bin/wait-for

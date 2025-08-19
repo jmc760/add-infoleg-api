@@ -11,7 +11,8 @@
     ],
     "require-dev": {
         "roots/wordpress": "^6.8",
-        "wp-cli/wp-cli-bundle": "^2.12"
+        "wp-cli/wp-cli-bundle": "^2.12",
+        "wpackagist-plugin/rewrite-rules-inspector": "^1.4"
     },
     "config": {
         "allow-plugins": {
