@@ -1,4 +1,1 @@
-*
-!.gitignore
-!/add-infoleg-api-plugin/
-!/add-infoleg-api-plugin/*
+/rewrite-rules-inspector/
